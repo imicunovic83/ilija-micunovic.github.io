@@ -15,23 +15,31 @@
             }
         }
     </script>
-    <style> body { font-family: 'Inter', system-ui, sans-serif; } </style>
+    <style> 
+        body { font-family: 'Inter', system-ui, sans-serif; scroll-padding-top: 120px; }
+        html { scroll-padding-top: 120px; }
+    </style>
 </head>
 <body class="bg-white text-slate-900 min-h-screen">
-    <!-- Nav -->
-    <nav class="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-slate-200">
-        <h1 class="text-2xl font-bold text-slate-900">Ilija Micunović</h1>
-        <div class="flex items-center space-x-6">
-            <a href="#about" class="text-slate-600 hover:text-primary font-medium">About</a>
-            <a href="#experience" class="text-slate-600 hover:text-primary font-medium">Experience</a>
-            <a href="#skills" class="text-slate-600 hover:text-primary font-medium">Skills</a>
-            <a href="Ilija Micunovic CV.pdf" download class="bg-primary text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition">Download CV</a>
+    <!-- Nav - FIXED HEIGHT za scroll-padding -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 max-w-4xl mx-auto px-6 py-6 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-slate-900">Ilija Micunović</h1>
+            <div class="flex items-center space-x-6">
+                <a href="#about" class="text-slate-600 hover:text-primary font-medium transition">About</a>
+                <a href="#experience" class="text-slate-600 hover:text-primary font-medium transition">Experience</a>
+                <a href="#skills" class="text-slate-600 hover:text-primary font-medium transition">Skills</a>
+                <a href="Ilija Micunovic CV.pdf" download class="bg-primary text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition">Download CV</a>
+            </div>
         </div>
     </nav>
 
+    <!-- Spacer za fixed nav -->
+    <div class="h-32"></div>
+
     <!-- Hero -->
     <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <img src="Ilija Profilna.jpg" alt="Ilija Micunovic" class="w-32 h-32 mx-auto rounded-2xl shadow-lg mb-8">
+        <img src="Ilija Profilna.jpg" alt="Ilija Micunovic" class="w-32 h-32 mx-auto rounded-2xl shadow-lg mb-8 ring-2 ring-slate-200">
         <div>
             <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">Hi, I'm Ilija Micunovic,</h2>
             <p class="text-2xl md:text-3xl font-semibold text-slate-700 mb-8">Product Leader</p>
@@ -44,12 +52,12 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="max-w-4xl mx-auto px-6 py-24">
+    <section id="about" class="max-w-4xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-12 text-slate-900">About Me</h3>
-        <div class="prose prose-lg max-w-none">
-            <p class="text-xl leading-relaxed mb-8">Experienced Product Owner with <strong>over 15 years in iGaming</strong>, based in Novi Sad, Serbia. Led Trading Department of <strong>14 across 9 markets</strong>: Serbia, Uganda, Nigeria & Balkan region.</p>
-            <p class="text-xl leading-relaxed mb-8">Specialized in end-to-end <strong>sportsbook integrations</strong> (Exefeed, Betradar – optimized to 2 months/project), Figma prototypes, 701% parlay bonuses, KYC compliance. Bilingual Serbian/English.</p>
-            <p class="text-xl leading-relaxed">Seeking <strong>Product Owner / Head of Product</strong> roles – remote.</p>
+        <div class="prose prose-lg max-w-none text-lg">
+            <p class="mb-8 leading-relaxed">Experienced Product Owner with <strong>over 15 years in iGaming</strong>, based in Novi Sad, Serbia. Led Trading Department of <strong>14 across 9 markets</strong>: Serbia, Uganda, Nigeria & Balkan region.</p>
+            <p class="mb-8 leading-relaxed">Specialized in end-to-end <strong>sportsbook integrations</strong> (Exefeed, Betradar – optimized to 2 months/project), Figma prototypes, 701% parlay bonuses, KYC compliance. Bilingual Serbian/English.</p>
+            <p class="leading-relaxed">Seeking <strong>Product Owner / Head of Product</strong> roles – remote.</p>
         </div>
     </section>
 
@@ -57,42 +65,42 @@
     <section id="experience" class="max-w-4xl mx-auto px-6 py-24">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Key Projects & Achievements</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
                 <h4 class="text-2xl font-bold mb-4 text-slate-900">Trading Leadership</h4>
-                <p class="text-slate-600 mb-4">Led 14 traders across 9 markets, delivering profitability through advanced strategies.</p>
+                <p class="text-slate-600">Led 14 traders across 9 markets, delivering profitability through advanced strategies.</p>
             </div>
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
                 <h4 class="text-2xl font-bold mb-4 text-slate-900">Sportsbook Integrations</h4>
-                <p class="text-slate-600 mb-4">Exefeed, Betradar, Innbets – end-to-end, 2 months per project.</p>
+                <p class="text-slate-600">Exefeed, Betradar, Innbets – end-to-end, 2 months per project.</p>
             </div>
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
                 <h4 class="text-2xl font-bold mb-4 text-slate-900">Product Development</h4>
-                <p class="text-slate-600 mb-4">Figma prototypes, UX/UI, 701% bonuses, compliance frameworks.</p>
+                <p class="text-slate-600">Figma prototypes, UX/UI, 701% bonuses, compliance frameworks.</p>
             </div>
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl transition-all hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white md:col-span-2">
                 <h4 class="text-2xl font-bold mb-4 text-slate-900">Multi-Market Operations</h4>
-                <p class="text-slate-600">Serbia, Austria, Poland, Croatia, Montenegro, Bosnia & Herzegovina, North Macedonia, Uganda, Nigeria – full platform scaling.</p>
+                <p class="text-slate-600">Serbia, Uganda, Nigeria, Balkan – full platform scaling & management.</p>
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="max-w-4xl mx-auto px-6 py-24 border-t border-slate-200">
+    <section id="skills" class="max-w-4xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Core Skills</h3>
         <div class="grid md:grid-cols-2 gap-12">
             <div>
                 <h4 class="text-2xl font-bold mb-8 text-slate-900">Technical</h4>
                 <div class="space-y-4">
-                    <div class="flex justify-between py-3 border-b border-slate-200">
-                        <span class="text-lg">Sportsbook Trading & Odds</span>
+                    <div class="flex justify-between py-4 px-4 bg-white rounded-xl border border-slate-200">
+                        <span class="text-lg font-medium">Sportsbook Trading & Odds</span>
                         <span class="font-bold text-primary text-lg">Expert</span>
                     </div>
-                    <div class="flex justify-between py-3 border-b border-slate-200">
-                        <span class="text-lg">API Integrations</span>
+                    <div class="flex justify-between py-4 px-4 bg-white rounded-xl border border-slate-200">
+                        <span class="text-lg font-medium">API Integrations</span>
                         <span class="font-bold text-primary text-lg">Expert</span>
                     </div>
-                    <div class="flex justify-between py-3 border-b border-slate-200">
-                        <span class="text-lg">Figma Prototyping</span>
+                    <div class="flex justify-between py-4 px-4 bg-white rounded-xl border border-slate-200">
+                        <span class="text-lg font-medium">Figma Prototyping</span>
                         <span class="font-bold text-primary text-lg">Advanced</span>
                     </div>
                 </div>
@@ -100,16 +108,16 @@
             <div>
                 <h4 class="text-2xl font-bold mb-8 text-slate-900">Business</h4>
                 <div class="space-y-4">
-                    <div class="flex justify-between py-3 border-b border-slate-200">
-                        <span class="text-lg">Multi-Market Ops</span>
+                    <div class="flex justify-between py-4 px-4 bg-white rounded-xl border border-slate-200">
+                        <span class="text-lg font-medium">Multi-Market Ops</span>
                         <span class="font-bold text-primary text-lg">Expert</span>
                     </div>
-                    <div class="flex justify-between py-3 border-b border-slate-200">
-                        <span class="text-lg">Bonus Optimization</span>
+                    <div class="flex justify-between py-4 px-4 bg-white rounded-xl border border-slate-200">
+                        <span class="text-lg font-medium">Bonus Optimization</span>
                         <span class="font-bold text-primary text-lg">Expert</span>
                     </div>
-                    <div class="flex justify-between py-3 border-b border-slate-200">
-                        <span class="text-lg">KYC / Compliance</span>
+                    <div class="flex justify-between py-4 px-4 bg-white rounded-xl border border-slate-200">
+                        <span class="text-lg font-medium">KYC / Compliance</span>
                         <span class="font-bold text-primary text-lg">Advanced</span>
                     </div>
                 </div>
@@ -117,15 +125,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="max-w-4xl mx-auto px-6 py-16 text-center border-t border-slate-200">
+    <!-- Contact -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 text-center">
         <h3 class="text-3xl font-black mb-8 text-slate-900">Get In Touch</h3>
-        <p class="text-lg text-slate-600 mb-8">Open for Product Owner / Product Manager / Sportsbook Manager / Head of Product roles – remote.</p>
+        <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">Open for Product Owner / Head of Product roles – remote worldwide.</p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <a href="mailto:ilijamicunovic@yahoo.com" class="bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition">ilijamicunovic@yahoo.com</a>
-            <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" class="border border-slate-300 px-8 py-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-100 transition">LinkedIn Profile</a>
+            <a href="mailto:ilijamicunovic@yahoo.com" class="bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg">ilijamicunovic@yahoo.com</a>
+            <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" class="border-2 border-slate-300 px-8 py-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:border-primary transition-all shadow-lg">LinkedIn Profile</a>
         </div>
         <p class="text-sm text-slate-500">&copy; 2026 Ilija Micunović. All rights reserved.</p>
-    </footer>
+    </section>
 </body>
 </html>
