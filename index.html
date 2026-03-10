@@ -1,78 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <title>Ilija Micunovic - iGaming Portfolio</title>
-    <meta charset="UTF
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #333; }
-header { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); color: white; text-align: center; padding: 80px 20px; }
-.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-.section { background: rgba(255,255,255,0.95); margin: 30px 0; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-h1 { font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-h2 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 15px; font-size: 1.8em; }
-ul { list-style-type: none; padding: 0; }
-li { margin: 15px 0; padding: 20px; background: #f8f9ff; border-left: 5px solid #667eea; border-radius: 0 8px 8px 0; transition: transform 0.3s; }
-li:hover { transform: translateX(10px); }
-.contact { text-align: center; font-size: 1.3em; }
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-@media (max-width: 768px) { h1 { font-size: 2.2em; } .section { padding: 25px; } }
-</style>
+    <title>Ilija Micunovic - iGaming Product Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#667eea' } } } }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .glass { backdrop-filter: blur(20px); }
+    </style>
 </head>
-<body>
-<header>
-<img src="Ilija Profilna.jpg" alt="Ilija Micunovic Profile Photo" style="width:160px; height:160px; border-radius:50%; display:block; margin:0 auto 20px; box-shadow:0 8px 25px rgba(0,0,0,0.2); border:4px solid #667eea;">
-<h1>Ilija Micunovic</h1>
-<p><strong>Senior Product Owner | Head of Trading</strong> | 15+ Years in iGaming & Sportsbook Operations</p>
-</header>
-<div class="container">
-<div class="section">
-<h2>About Me</h2>
-<p>I am Ilija Mićunović, experienced Product Owner with <strong>over 15 years in iGaming</strong>, based in Novi Sad, Serbia. I have led Trading teams of <strong>14 members across 9 markets</strong>: Serbia, Austria, Poland, Croatia, Montenegro, Bosnia & Herzegovina, North Macedonia, Uganda and Nigeria, optimizing operations and achieving profitability through advanced strategies.</p>
-<p>I am specialized in <strong>end-to-end sportsbook integrations</strong> (Exefeed, Betradar, Innbets – from 3 to 2 months per project), Figma prototypes, bonus schemes (+701% parlay), and compliance (KYC). I handle full platform development – from UX design ideas to mobile/web app realization, taking concepts from idea to live implementation.</p>
-<p>Bilingual (Serbian/English), available for remote <strong>Product Owner, Sportsbook Manager, Product Manager, Head of Product</strong> roles.</p>
-</div>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white min-h-screen">
+    <!-- Hero -->
+    <header class="glass bg-white/10 sticky top-0 z-50 border-b border-white/20">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Ilija Micunović</h1>
+            <div class="flex space-x-4">
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#experience" class="hover:text-primary transition">Experience</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="Ilija Micunovic CV.pdf" download class="bg-primary px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition">Download CV</a>
+            </div>
+        </nav>
+    </header>
 
-<div class="section">
-<h2>Experience & Key Achievements</h2>
-<ul>
-<li><strong>Trading Department Leadership:</strong> Led team of 14 traders across 9 markets, delivering consistent profitability through advanced odds management and risk strategies.</li>
-<li><strong>Sportsbook Integrations:</strong> End-to-end API integrations with Exefeed, Betradar, Innbets – first integration completed in 3 months, subsequent projects optimized to 2 months. Markets: Serbia, Croatia, Montenegro, Bosnia, Nigeria, Uganda.</li>
-<li><strong>Product Development:</strong> Figma prototypes for web/mobile sportsbook apps, player bonus schemes (701% parlay boosts), UX/UI improvements, compliance frameworks (KYC, fraud detection).</li>
-<li><strong>Companies:</strong> AdmiralBet, Ancient Gaming – from operations to Head of Trading and Product Management.</li>
-</ul>
-</div>
+    <!-- Main Hero -->
+    <section class="max-w-6xl mx-auto px-6 py-24 text-center">
+        <img src="Ilija Profilna.jpg" alt="Ilija Micunovic" class="w-48 h-48 mx-auto rounded-3xl shadow-2xl mb-8 ring-4 ring-primary/30">
+        <h2 class="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white via-primary to-purple-400 bg-clip-text text-transparent">Senior Product Owner</h2>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">15+ years in iGaming & Sportsbook. Leading Trading teams across 9 markets. Product roadmaps to live platforms.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" class="bg-primary px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-all">Get In Touch</a>
+            <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" class="border border-white/30 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all">LinkedIn</a>
+        </div>
+    </section>
 
-<div class="section">
-<h2>Core Skills</h2>
-<div class="skills-grid">
-<div>
-<h3>Technical</h3>
-<ul>
-<li>Sportsbook Trading & Odds</li>
-<li>API Integrations (Betradar/Nsoft)</li>
-<li>Figma Prototyping & UX/UI</li>
-<li>Product Roadmaps</li>
-</ul>
-</div>
-<div>
-<h3>Business</h3>
-<ul>
-<li>Multi-Market Operations</li>
-<li>Player Retention Strategies</li>
-<li>Bonus & CRM Optimization</li>
-<li>Compliance & KYC</li>
-</ul>
-</div>
-</div>
-</div>
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-black mb-8 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">About Me</h3>
+                <p class="text-lg mb-6 leading-relaxed">Experienced Product Owner with <strong>15+ years in iGaming</strong>, based in Novi Sad, Serbia. Led Trading Department of <strong>14 across 9 markets</strong>: Serbia, Uganda, Nigeria, Balkan.</p>
+                <p class="text-lg mb-6 leading-relaxed">Specialized in <strong>sportsbook integrations</strong> (Exefeed, Betradar – 2 months/project), Figma prototypes, 701% parlay bonuses, KYC compliance. From UX ideas to full web/app launches.</p>
+                <p class="text-lg leading-relaxed">Bilingual (Serbian/English), seeking <strong>Product Owner / Head of Product</strong> roles – remote.</p>
+            </div>
+            <div class="glass bg-white/5 p-8 rounded-3xl backdrop-blur-xl">
+                <h4 class="text-2xl font-bold mb-6">Quick Stats</h4>
+                <div class="space-y-6">
+                    <div class="flex justify-between">
+                        <span>Markets Managed</span><span class="font-bold text-2xl text-primary">9+</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Team Size</span><span class="font-bold text-2xl text-primary">14</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Integrations</span><span class="font-bold text-2xl text-primary">6+</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Years Experience</span><span class="font-bold text-2xl text-primary">15+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="section contact">
-<h2>Get In Touch</h2>
-<p>📧 <a href="mailto:ilijamicunovic@yahoo.com">ilijamicunovic@yahoo.com</a> | 🔗 <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank">LinkedIn</a></p>
-<p><strong>📄 <a href="Ilija Micunovic CV.pdf" download>Download CV</a></strong> </p>
-<p>Available for <strong>Product Owner / Sportsbook Manager / Product Manager / Head of Product</strong> roles – remote friendly.</p>
-</div>
-</div>
+    <!-- Experience -->
+    <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
+        <h3 class="text-4xl md:text-5xl font-black text-center mb-20 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Key Projects & Achievements</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass bg-white/10 p-8 rounded-3xl hover:scale-105 transition-all group">
+                <h4 class="text-2xl font-bold mb-4 group-hover:text-primary transition">Trading Leadership</h4>
+                <p>Head of Trading – 14 traders, 9 markets, consistent profitability via odds strategies.</p>
+            </div>
+            <div class="glass bg-white/10 p-8 rounded-3xl hover:scale-105 transition-all group">
+                <h4 class="text-2xl font-bold mb-4 group-hover:text-primary transition">API Integrations</h4>
+                <p>Exefeed/Betradar/Innbets – full end-to-end, optimized from 3→2 months/project.</p>
+            </div>
+            <div class="glass bg-white/10 p-8 rounded-3xl hover:scale-105 transition-all group">
+                <h4 class="text-2xl font-bold mb-4 group-hover:text-primary transition">Product Development</h4>
+                <p>Figma prototypes, 701% parlay bonuses, UX/UI sportsbook apps, compliance.</p>
+            </div>
+            <div class="glass bg-white/10 p-8 rounded-3xl hover:scale-105 transition-all group">
+                <h4 class="text-2xl font-bold mb-4 group-hover:text-primary transition">Multi-Market Ops</h4>
+                <p>Serbia, Uganda, Nigeria, Balkan – platform management & scaling.</p>
+            </div>
+            <div class="glass bg-white/10 p-8 rounded-3xl hover:scale-105 transition-all group">
+                <h4 class="text-2xl font-bold mb-4 group-hover:text-primary transition">Companies</h4>
+                <p>AdmiralBet, Ancient Gaming – Operations to Head of Trading.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="max-w-6xl mx-auto px-6 py-24">
+        <h3 class="text-4xl md:text-5xl font-black text-center mb-20 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Core Skills</h3>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h4 class="text-2xl font-bold mb-8">Technical Expertise</h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between py-2"><span>Sportsbook Trading & Odds</span><span class="font-bold text-primary">Expert</span></div>
+                    <div class="flex justify-between py-2"><span>API Integrations</span><span class="font-bold text-primary">Expert</span></div>
+                    <div class="flex justify-between py-2"><span>Figma / UX/UI Prototypes</span><span class="font-bold text-primary">Advanced</span></div>
+                    <div class="flex justify-between py-2"><span>Product Roadmaps</span><span class="font-bold text-primary">Expert</span></div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-2xl font-bold mb-8">Business Skills</h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between py-2"><span>Multi-Market Operations</span><span class="font-bold text-primary">Expert</span></div>
+                    <div class="flex justify-between py-2"><span>Bonus Optimization</span><span class="font-bold text-primary">Expert</span></div>
+                    <div class="flex justify-between py-2"><span>KYC / Compliance</span><span class="font-bold text-primary">Advanced</span></div>
+                    <div class="flex justify-between py-2"><span>Team Leadership</span><span class="font-bold text-primary">Expert</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-24 text-center">
+        <h3 class="text-4xl md:text-5xl font-black mb-12 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Let's Work Together</h3>
+        <p class="text-xl mb-8 opacity-90">Open for Product Owner / Head of Product roles in iGaming – remote worldwide.</p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <a href="mailto:ilijamicunovic@yahoo.com" class="bg-primary px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-all">ilijamicunovic@yahoo.com</a>
+            <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" class="border border-white/30 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all">View LinkedIn</a>
+        </div>
+        <p class="text-sm opacity-70">&copy; 2026 Ilija Micunović. Built with ❤️ for iGaming careers.</p>
+    </section>
 </body>
 </html>
