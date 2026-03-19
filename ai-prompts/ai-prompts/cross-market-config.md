@@ -1,2 +1,0 @@
-At AdmiralBet, I optimized player props UX (LeBron total points) — from match page to homepage highlight. Create Figma wireframe spec for dynamic highlight (user choice: daily/weekly top props), with API calls for odds and 20% play rate boost metrics from my project.
-For AdmiralBet player props across 6 markets (Serbia high margins, Nigeria low), generate config JSON for margins/odds display and A/B test plan for retention improvement.
