@@ -1,0 +1,2 @@
+Document AdmiralBet tiered parlay bonus scheme (2% for 3 pairs, up to 701% for 40 pairs, min odds 1.30). Create acceptance criteria for dev team, wagering requirements (x5 on cash tickets), and SQL validation (max payout 21M RSD). I led from concept to implementation.
+For AdmiralBet 701% parlay bonus, create A/B test plan for retention (control vs. promo group). Metrics: D1 deposits +25%, parlay volume. Include SQL queries for tracking and promo email template for Serbian market.
