@@ -16,8 +16,14 @@
         }
     </script>
     <style>
-        body { font-family: 'Inter', system-ui, sans-serif; scroll-padding-top: 120px; }
-        html { scroll-padding-top: 120px; }
+        html {
+            scroll-padding-top: 120px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            scroll-padding-top: 120px;
+        }
     </style>
 </head>
 <body class="bg-white text-slate-900 min-h-screen">
@@ -34,8 +40,8 @@
 
                 <div id="menuLinks" class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">About</a>
-                    <a href="#promo&product" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Promo & Product</a>
-                    <a href="#case studies" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Case Studies</a>
+                    <a href="#promo-product" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Promo & Product</a>
+                    <a href="#case-studies" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Case Studies</a>
                     <a href="#how-i-work" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">How I Work</a>
                     <a href="#ai-toolkit" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">AI Toolkit</a>
                     <a href="#certifications" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Certifications</a>
@@ -45,8 +51,8 @@
 
             <div id="mobileMenu" class="md:hidden hidden mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 bg-white/95">
                 <a href="#about" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">About</a>
-                <a href="#promo&product" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Promo & Product</a>
-                <a href="#case studies" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Case Studies</a>
+                <a href="#promo-product" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Promo & Product</a>
+                <a href="#case-studies" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Case Studies</a>
                 <a href="#how-i-work" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">How I Work</a>
                 <a href="#ai-toolkit" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">AI Toolkit</a>
                 <a href="#certifications" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Certifications</a>
@@ -92,7 +98,7 @@
         </div>
     </section>
 
-    <section id="about" class="max-w-5xl mx-auto px-6 py-24 bg-slate-50">
+    <section id="about" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-12 text-slate-900">About Me</h3>
         <div class="max-w-3xl text-lg text-slate-700 space-y-8 leading-relaxed">
             <p>
@@ -110,7 +116,7 @@
         </div>
     </section>
 
-    <section id="experience" class="max-w-5xl mx-auto px-6 py-24">
+    <section id="experience" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Key Projects & Achievements</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
@@ -130,8 +136,7 @@
         </div>
     </section>
 
-    <section id="promo & product
-        " class="max-w-5xl mx-auto px-6 py-24 bg-slate-50">
+    <section id="promo-product" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Promo & Product</h3>
         <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
             Product-driven promo design, sportsbook frontend logic, CMS-based configuration, and user-focused betting experiences across web and mobile.
@@ -189,123 +194,124 @@
         </div>
     </section>
 
-    <section id="case studies" class="max-w-5xl mx-auto px-6 py-24">
+    <section id="case-studies" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Case Studies</h3>
         <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
             Selected product initiatives showing how I approached discovery, execution, and measurable impact in sportsbook environments.
         </p>
 
         <div class="space-y-8">
-            <<div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
-    <h4 class="text-2xl font-bold text-slate-900 mb-3">Player Props Discovery & Frontend Navigation</h4>
-    <p class="text-slate-600 leading-relaxed mb-4">
-        Context: Basketball player markets had strong user interest, but discovery was still dependent on deeper match-page navigation.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        Problem: Valuable player props were not visible enough in the core sportsbook journey, which limited engagement and made the experience harder to scan.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        What I did: I defined dedicated frontend navigation for Basketball Players markets and improved how these markets were presented in the main sportsbook structure.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        Why this approach: Surfacing the market earlier in the journey was a simpler and more scalable solution than relying only on match-page entry points.
-    </p>
-    <div class="grid sm:grid-cols-3 gap-4 text-sm">
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Problem</p>
-            <p class="text-slate-600">Low discoverability of player props.</p>
-        </div>
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Action</p>
-            <p class="text-slate-600">Dedicated frontend navigation and improved UX structure.</p>
-        </div>
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Result</p>
-            <p class="text-slate-600">Approx. 20% uplift in player props play rate.</p>
-        </div>
-    </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
+                <h4 class="text-2xl font-bold text-slate-900 mb-3">Player Props Discovery & Frontend Navigation</h4>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Context: Basketball player markets had strong user interest, but discovery was still dependent on deeper match-page navigation.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Problem: Valuable player props were not visible enough in the core sportsbook journey, which limited engagement and made the experience harder to scan.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    What I did: I defined dedicated frontend navigation for Basketball Players markets and improved how these markets were presented in the main sportsbook structure.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Why this approach: Surfacing the market earlier in the journey was a simpler and more scalable solution than relying only on match-page entry points.
+                </p>
+                <div class="grid sm:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Problem</p>
+                        <p class="text-slate-600">Low discoverability of player props.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Action</p>
+                        <p class="text-slate-600">Dedicated frontend navigation and improved UX structure.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Result</p>
+                        <p class="text-slate-600">Approx. 20% uplift in player props play rate.</p>
+                    </div>
+                </div>
 
-    <div class="mt-6">
-        <p class="text-sm font-semibold text-slate-900 mb-3">Proof Artifact</p>
-        <a href="./kosarka-igraci-frontend.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
-            <div class="h-[260px] flex items-center justify-center">
-                <img src="./kosarka-igraci-frontend.png" alt="Player Props navigation proof artifact" class="max-h-full w-full object-contain rounded-md">
+                <div class="mt-6">
+                    <p class="text-sm font-semibold text-slate-900 mb-3">Proof Artifact</p>
+                    <a href="./kosarka-igraci-frontend.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
+                        <div class="h-[260px] flex items-center justify-center">
+                            <img src="./kosarka-igraci-frontend.png" alt="Player Props navigation proof artifact" class="max-h-full w-full object-contain rounded-md">
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
-    </div>
-</div>
-
-           <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
-    <h4 class="text-2xl font-bold text-slate-900 mb-3">701% Parlay Bonus — CMS Visibility & Risk Controls</h4>
-    <p class="text-slate-600 leading-relaxed mb-4">
-        Context: A high-impact promotional mechanic needed to be visible on the frontend, commercially effective, and operationally safe.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        Problem: Promo journeys can increase engagement, but unclear odds presentation and weak control mechanisms can create confusion and abuse risk.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        What I did: I worked on the product logic behind the 701% Parlay Bonus, including CMS-driven odds highlighting, promotional visibility, and fraud-prevention mechanics.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        Why this approach: CMS-based control reduced dependency on manual changes and made the campaign easier to manage across different states and operational needs.
-    </p>
-    <div class="grid sm:grid-cols-3 gap-4 text-sm">
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Problem</p>
-            <p class="text-slate-600">Complex promo flow with risk of user confusion and misuse.</p>
-        </div>
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Action</p>
-            <p class="text-slate-600">Defined CMS-driven frontend logic and fraud-prevention rules.</p>
-        </div>
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Result</p>
-            <p class="text-slate-600">Stronger promo visibility and more controlled execution.</p>
-        </div>
-    </div>
-
-    <div class="mt-6">
-        <p class="text-sm font-semibold text-slate-900 mb-3">Proof Artifact</p>
-        <a href="./fudbal-podvucene-kvote.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
-            <div class="h-[260px] flex items-center justify-center">
-                <img src="./fudbal-podvucene-kvote.png" alt="701 percent Parlay Bonus highlighted odds proof artifact" class="max-h-full w-full object-contain rounded-md">
-            </div>
-        </a>
-    </div>
-</div
 
             <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
-    <h4 class="text-2xl font-bold text-slate-900 mb-3">Multi-Market CMS Customization for White-Label Delivery</h4>
-    <p class="text-slate-600 leading-relaxed mb-4">
-        Context: Different markets required localized homepage content, market emphasis, and promotional presentation.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        Problem: A single static sportsbook setup created delivery bottlenecks and reduced flexibility for local market needs.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        What I did: I helped architect CMS capabilities for white-label customization of homepage content, offers, and market-specific presentation.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-4">
-        Why this approach: Market-level configurability reduced engineering dependency and made it easier to support different commercial priorities across markets.
-    </p>
-    <div class="grid sm:grid-cols-3 gap-4 text-sm">
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Problem</p>
-            <p class="text-slate-600">Different markets required different UX, content, and pricing emphasis.</p>
+                <h4 class="text-2xl font-bold text-slate-900 mb-3">701% Parlay Bonus — CMS Visibility & Risk Controls</h4>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Context: A high-impact promotional mechanic needed to be visible on the frontend, commercially effective, and operationally safe.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Problem: Promo journeys can increase engagement, but unclear odds presentation and weak control mechanisms can create confusion and abuse risk.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    What I did: I worked on the product logic behind the 701% Parlay Bonus, including CMS-driven odds highlighting, promotional visibility, and fraud-prevention mechanics.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Why this approach: CMS-based control reduced dependency on manual changes and made the campaign easier to manage across different states and operational needs.
+                </p>
+                <div class="grid sm:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Problem</p>
+                        <p class="text-slate-600">Complex promo flow with risk of user confusion and misuse.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Action</p>
+                        <p class="text-slate-600">Defined CMS-driven frontend logic and fraud-prevention rules.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Result</p>
+                        <p class="text-slate-600">Stronger promo visibility and more controlled execution.</p>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <p class="text-sm font-semibold text-slate-900 mb-3">Proof Artifact</p>
+                    <a href="./fudbal-podvucene-kvote.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
+                        <div class="h-[260px] flex items-center justify-center">
+                            <img src="./fudbal-podvucene-kvote.png" alt="701 percent Parlay Bonus highlighted odds proof artifact" class="max-h-full w-full object-contain rounded-md">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
+                <h4 class="text-2xl font-bold text-slate-900 mb-3">Multi-Market CMS Customization for White-Label Delivery</h4>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Context: Different markets required localized homepage content, market emphasis, and promotional presentation.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Problem: A single static sportsbook setup created delivery bottlenecks and reduced flexibility for local market needs.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    What I did: I helped architect CMS capabilities for white-label customization of homepage content, offers, and market-specific presentation.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Why this approach: Market-level configurability reduced engineering dependency and made it easier to support different commercial priorities across markets.
+                </p>
+                <div class="grid sm:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Problem</p>
+                        <p class="text-slate-600">Different markets required different UX, content, and pricing emphasis.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Action</p>
+                        <p class="text-slate-600">Built CMS-based white-label customization across 9 markets.</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <p class="font-semibold text-slate-900 mb-1">Result</p>
+                        <p class="text-slate-600">Faster rollout execution and stronger local market fit.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Action</p>
-            <p class="text-slate-600">Built CMS-based white-label customization across 9 markets.</p>
-        </div>
-        <div class="bg-blue-50 rounded-xl p-4">
-            <p class="font-semibold text-slate-900 mb-1">Result</p>
-            <p class="text-slate-600">Faster rollout execution and stronger local market fit.</p>
-        </div>
-    </div>
-</div>
     </section>
 
-    <section id="how-i-work" class="max-w-5xl mx-auto px-6 py-24 bg-slate-50">
+    <section id="how-i-work" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">How I Work</h3>
         <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
             My approach combines sportsbook domain expertise, structured product delivery, and close collaboration with technical and operational teams.
@@ -342,7 +348,7 @@
         </div>
     </section>
 
-    <section id="skills" class="max-w-5xl mx-auto px-6 py-24 bg-slate-50">
+    <section id="skills" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Core Skills</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <div class="space-y-4">
@@ -374,7 +380,7 @@
         </div>
     </section>
 
-    <section id="ai-toolkit" class="max-w-5xl mx-auto px-6 py-24 bg-gradient-to-r from-indigo-50 to-blue-50">
+    <section id="ai-toolkit" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-gradient-to-r from-indigo-50 to-blue-50">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">AI Toolkit Accelerator</h3>
         <p class="text-xl text-slate-600 text-center mb-16 max-w-2xl mx-auto">Based on AdmiralBet workflows, sportsbook integrations, promo logic, and product delivery use cases.</p>
 
@@ -406,7 +412,7 @@
         </div>
     </section>
 
-    <section id="certifications" class="max-w-5xl mx-auto px-6 py-24 bg-slate-50">
+    <section id="certifications" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
         <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Certifications</h3>
         <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
             Relevant certifications supporting product ownership, leadership, and structured delivery.
@@ -437,7 +443,7 @@
         </div>
     </section>
 
-    <section id="contact" class="max-w-5xl mx-auto px-6 py-24 text-center">
+    <section id="contact" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 text-center">
         <h3 class="text-3xl font-black mb-8 text-slate-900">Get In Touch</h3>
         <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">Open for Product Manager / Product Owner / Sportsbook Manager / Head of Product roles – remote worldwide.</p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
