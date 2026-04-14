@@ -355,11 +355,28 @@
     </section>
 
     <script>
-        const btn = document.getElementById('menuBtn');
-        const menu = document.getElementById('mobileMenu');
-        btn?.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const mobileLinks = menu.querySelectorAll('a');
+
+    btn?.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
         });
-    </script>
+    });
+
+    document.addEventListener('click', (e) => {
+        const clickedInsideMenu = menu.contains(e.target);
+        const clickedButton = btn.contains(e.target);
+
+        if (!clickedInsideMenu && !clickedButton) {
+            menu.classList.add('hidden');
+        }
+    });
+</script>
 </body>
 </html>
