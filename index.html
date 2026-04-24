@@ -4,13 +4,42 @@
     <title>Ilija Micunovic - iGaming Product Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Ilija Micunovic - Senior Product Owner specialized in sportsbook product, integrations, promo mechanics, and multi-market delivery across 9 markets.">
+    <meta name="author" content="Ilija Micunovic">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imicunovic83.github.io/">
+    <meta property="og:title" content="Ilija Micunovic - iGaming Product Portfolio">
+    <meta property="og:description" content="Senior Product Owner | Sportsbook UX, Integrations & Multi-Market Delivery across 9 markets.">
+    <meta property="og:image" content="https://imicunovic83.github.io/Ilija%20Profilna.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ilija Micunovic - iGaming Product Portfolio">
+    <meta name="twitter:description" content="Senior Product Owner | Sportsbook UX, Integrations & Multi-Market Delivery across 9 markets.">
+    <meta name="twitter:image" content="https://imicunovic83.github.io/Ilija%20Profilna.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%234f46e5'/%3E%3Cstop offset='100%25' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Inter, Arial, sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EIM%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: { primary: '#2563eb' }
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#4f46e5',
+                        accent: '#7c3aed',
+                        highlight: '#f59e0b',
+                        ink: '#0f172a'
+                    }
                 }
             }
         }
@@ -22,435 +51,669 @@
         }
         body {
             font-family: 'Inter', system-ui, sans-serif;
-            scroll-padding-top: 120px;
+            color: #0f172a;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .gradient-number {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .hero-bg {
+            background:
+                radial-gradient(ellipse 80% 50% at 20% 0%, rgba(79, 70, 229, 0.10), transparent 60%),
+                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(236, 72, 153, 0.08), transparent 60%),
+                radial-gradient(ellipse 70% 50% at 50% 100%, rgba(124, 58, 237, 0.06), transparent 60%),
+                #ffffff;
+        }
+        .soft-section {
+            background: linear-gradient(180deg, #fafafa 0%, #f5f5f7 100%);
+        }
+        .accent-section {
+            background:
+                radial-gradient(ellipse at top, rgba(79, 70, 229, 0.05), transparent 70%),
+                linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+        }
+        .card {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 48px -20px rgba(79, 70, 229, 0.22);
+            border-color: rgba(79, 70, 229, 0.35);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 24px -10px rgba(79, 70, 229, 0.5);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px -10px rgba(124, 58, 237, 0.55);
+        }
+        .btn-ghost {
+            transition: all 0.25s ease;
+        }
+        .btn-ghost:hover {
+            transform: translateY(-2px);
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+        .profile-ring {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+            padding: 4px;
+            border-radius: 1.25rem;
+            box-shadow: 0 20px 40px -15px rgba(79, 70, 229, 0.35);
+        }
+        .step-number {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            box-shadow: 0 8px 20px -8px rgba(79, 70, 229, 0.45);
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .par-red { background: #fef2f2; color: #b91c1c; }
+        .par-amber { background: #fffbeb; color: #b45309; }
+        .par-green { background: #f0fdf4; color: #15803d; }
+        .par-card-red { background: linear-gradient(135deg, #fff1f2, #ffe4e6); border-color: #fecaca; }
+        .par-card-amber { background: linear-gradient(135deg, #fffbeb, #fef3c7); border-color: #fde68a; }
+        .par-card-green { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: #bbf7d0; }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 2px;
+            width: 0;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            transition: width 0.25s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.85rem;
+            background: #eef2ff;
+            color: #4338ca;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        .tag-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        }
+        .skill-chip {
+            background: white;
+            border: 1px solid #e2e8f0;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-chip::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #4f46e5, #7c3aed);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+        .skill-chip:hover {
+            border-color: #c7d2fe;
+            transform: translateX(4px);
+        }
+        .skill-chip:hover::before {
+            opacity: 1;
         }
     </style>
 </head>
-<body class="bg-white text-slate-900 min-h-screen">
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4">
+<body class="bg-white min-h-screen">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div class="flex items-center justify-between gap-4">
-                <h1 class="text-xl sm:text-2xl font-bold text-slate-900 leading-none">
-                    Ilija Micunovic
+                <h1 class="font-display text-xl sm:text-2xl font-bold text-ink leading-none">
+                    Ilija <span class="gradient-text">Micunovic</span>
                 </h1>
 
-                <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-slate-700 font-medium hover:bg-slate-50">
+                <button id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu" class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 px-3 py-2 text-slate-700 font-medium hover:bg-slate-50">
                     ☰ Menu
                 </button>
 
-                <div id="menuLinks" class="hidden md:flex items-center space-x-6">
-                    <a href="#about" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">About</a>
-                    <a href="#promo-product" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Promo & Product</a>
-                    <a href="#case-studies" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Case Studies</a>
-                    <a href="#how-i-work" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">How I Work</a>
-                    <a href="#ai-toolkit" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">AI Toolkit</a>
-                    <a href="#certifications" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Certifications</a>
-                    <a href="#contact" class="text-slate-600 hover:text-primary font-medium transition whitespace-nowrap">Contact</a>
+                <div id="menuLinks" class="hidden md:flex items-center space-x-7">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">About</a>
+                    <a href="#promo-product" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">Promo & Product</a>
+                    <a href="#case-studies" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">Case Studies</a>
+                    <a href="#how-i-work" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">How I Work</a>
+                    <a href="#ai-toolkit" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">AI Toolkit</a>
+                    <a href="#certifications" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">Certifications</a>
+                    <a href="#contact" class="nav-link text-slate-600 hover:text-ink font-medium transition whitespace-nowrap text-sm">Contact</a>
                 </div>
             </div>
 
-            <div id="mobileMenu" class="md:hidden hidden mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 bg-white/95">
-                <a href="#about" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">About</a>
-                <a href="#promo-product" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Promo & Product</a>
-                <a href="#case-studies" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Case Studies</a>
-                <a href="#how-i-work" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">How I Work</a>
-                <a href="#ai-toolkit" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">AI Toolkit</a>
-                <a href="#certifications" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Certifications</a>
-                <a href="#contact" class="px-2 py-2 rounded-lg hover:bg-slate-100 text-slate-600 font-medium">Contact</a>
+            <div id="mobileMenu" class="md:hidden hidden mt-4 flex flex-col gap-2 border-t border-slate-200 pt-4 bg-white/95">
+                <a href="#about" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">About</a>
+                <a href="#promo-product" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">Promo & Product</a>
+                <a href="#case-studies" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">Case Studies</a>
+                <a href="#how-i-work" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">How I Work</a>
+                <a href="#ai-toolkit" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">AI Toolkit</a>
+                <a href="#certifications" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">Certifications</a>
+                <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-indigo-50 text-slate-700 font-medium">Contact</a>
             </div>
         </div>
     </nav>
 
-    <div class="h-20 sm:h-24 md:h-32"></div>
+    <div class="h-20 sm:h-24 md:h-28"></div>
 
-    <section class="max-w-5xl mx-auto px-6 py-20 text-center">
-        <img src="Ilija Profilna.jpg" alt="Ilija Micunovic" class="w-32 h-32 mx-auto rounded-2xl shadow-lg mb-8 ring-2 ring-slate-200">
-        <div>
-            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight">Hi, I'm Ilija Micunovic,</h2>
-            <p class="text-2xl md:text-3xl font-semibold text-slate-700 mb-8">Senior Product Owner | Sportsbook UX, Integrations & Multi-Market Delivery</p>
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                15+ years in sportsbook product delivery across 9 markets, shaping web and mobile betting journeys, frontend usability, CMS-driven experiences, and multi-market platform customization.
+    <!-- HERO -->
+    <section class="hero-bg relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 py-24 text-center relative z-10">
+            <div class="profile-ring w-36 h-36 mx-auto mb-10">
+                <img src="Ilija Profilna.jpg" alt="Ilija Micunovic" class="w-full h-full rounded-[1rem] object-cover bg-white">
+            </div>
+
+            <span class="tag mb-6"><span class="tag-dot"></span>Senior Product Owner · Novi Sad, Serbia</span>
+
+            <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-[1.1] text-ink">
+                Hi, I'm <span class="gradient-text">Ilija Micunovic</span>
+            </h2>
+            <p class="font-display text-xl md:text-2xl font-medium text-slate-600 mb-8 max-w-3xl mx-auto">
+                Sportsbook UX, Integrations &amp; Multi-Market Delivery
+            </p>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-14 leading-relaxed">
+                15+ years in sportsbook product delivery across 9 markets — shaping web and mobile betting journeys, frontend usability, CMS-driven experiences, and multi-market platform customization.
             </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10">
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 shadow-sm">
-                    <p class="text-2xl font-black text-slate-900">15+</p>
-                    <p class="text-sm text-slate-600">Years in iGaming</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <p class="font-display text-4xl font-bold gradient-number mb-1">15+</p>
+                    <p class="text-sm text-slate-600 font-medium">Years in iGaming</p>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 shadow-sm">
-                    <p class="text-2xl font-black text-slate-900">9</p>
-                    <p class="text-sm text-slate-600">Markets Delivered</p>
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <p class="font-display text-4xl font-bold gradient-number mb-1">9</p>
+                    <p class="text-sm text-slate-600 font-medium">Markets Delivered</p>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 shadow-sm">
-                    <p class="text-2xl font-black text-slate-900">6+</p>
-                    <p class="text-sm text-slate-600">Provider Integrations</p>
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <p class="font-display text-4xl font-bold gradient-number mb-1">6+</p>
+                    <p class="text-sm text-slate-600 font-medium">Provider Integrations</p>
                 </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 shadow-sm">
-                    <p class="text-2xl font-black text-slate-900">20%</p>
-                    <p class="text-sm text-slate-600">Player Props Uplift</p>
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <p class="font-display text-4xl font-bold gradient-number mb-1">20%</p>
+                    <p class="text-sm text-slate-600 font-medium">Player Props Uplift</p>
                 </div>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition">Get In Touch</a>
-                <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" rel="noopener noreferrer" class="border border-slate-300 px-8 py-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 transition">LinkedIn</a>
+                <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-xl font-semibold">Say Hello</a>
+                <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" rel="noopener noreferrer" class="btn-ghost border-2 border-slate-300 px-8 py-4 rounded-xl font-semibold text-slate-700 bg-white">LinkedIn</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
-        <h3 class="text-4xl font-black mb-12 text-slate-900">About Me</h3>
-        <div class="max-w-3xl text-lg text-slate-700 space-y-8 leading-relaxed">
-            <p>
-                Experienced Product Owner with <strong>over 15 years in iGaming</strong>, based in Novi Sad, Serbia. Led Trading Department of <strong>14 professionals across 9 markets</strong>: Serbia, Austria, Poland, Croatia, Montenegro, Bosnia & Herzegovina, North Macedonia, Uganda, Nigeria.
-            </p>
-            <p>
-                Specialized in end-to-end <strong>sportsbook integrations</strong>, sportsbook frontend functionality, and multi-market product delivery. My work includes API-based provider integrations, Figma collaboration, CMS configuration, betting journey optimization, and product decisions that improve navigation, discoverability, and overall usability across app and web.
-            </p>
-            <p>
-                As a <strong>Product Owner / Product Manager</strong>, I have worked on bonus mechanics, player retention, frontend odds presentation, player props discoverability, and white-label sportsbook customization. I enjoy translating complex sportsbook logic into simple and practical user experiences, while working closely with developers, trading teams, and operations.
-            </p>
-            <p>
-                Seeking <strong>Product Manager / Product Owner / Sportsbook Manager / Head of Product</strong> roles – remote worldwide.
-            </p>
+    <!-- ABOUT -->
+    <section id="about" class="scroll-mt-24 soft-section">
+        <div class="max-w-5xl mx-auto px-6 py-24">
+            <span class="tag mb-4"><span class="tag-dot"></span>About</span>
+            <h3 class="font-display text-4xl md:text-5xl font-bold mb-10 text-ink">
+                Turning complex sportsbook logic <br class="hidden md:block"><span class="gradient-text">into practical experiences.</span>
+            </h3>
+            <div class="max-w-3xl text-lg text-slate-700 space-y-6 leading-relaxed">
+                <p>
+                    Product Owner with <strong class="text-ink">over 15 years in iGaming</strong>, based in Novi Sad, Serbia. Led a Trading Department of <strong class="text-ink">14 professionals across 9 markets</strong>: Serbia, Austria, Poland, Croatia, Montenegro, Bosnia &amp; Herzegovina, North Macedonia, Uganda, Nigeria.
+                </p>
+                <p>
+                    Focused on end-to-end <strong class="text-ink">sportsbook integrations</strong>, sportsbook frontend functionality, and multi-market product delivery. My work includes API-based provider integrations, Figma collaboration, CMS configuration, betting journey optimization, and product decisions that improve navigation, discoverability, and overall usability across app and web.
+                </p>
+                <p>
+                    As a <strong class="text-ink">Product Owner / Product Manager</strong>, I have worked on bonus mechanics, player retention, frontend odds presentation, player props discoverability, and white-label sportsbook customization. I enjoy translating complex sportsbook logic into simple and practical user experiences, while working closely with developers, trading teams, and operations.
+                </p>
+            </div>
         </div>
     </section>
 
+    <!-- KEY PROJECTS -->
     <section id="experience" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Key Projects & Achievements</h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">Sportsbook Integrations</h4>
-                <p class="text-slate-600 leading-relaxed">Exefeed, Betradar, Innbets – end-to-end integrations across multiple markets, including API mapping, frontend verification, market structure setup, and sportsbook delivery optimization.</p>
+        <div class="text-center mb-16">
+            <span class="tag mb-4"><span class="tag-dot"></span>Experience</span>
+            <h3 class="font-display text-4xl md:text-5xl font-bold text-ink">Key Projects &amp; Achievements</h3>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card border border-slate-200 p-8 rounded-2xl bg-white">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center mb-5 shadow-lg shadow-indigo-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </div>
+                <h4 class="font-display text-xl font-bold mb-3 text-ink">Sportsbook Integrations</h4>
+                <p class="text-slate-600 leading-relaxed">Exefeed, Betradar, Innbets — end-to-end integrations across multiple markets, including API mapping, frontend verification, market structure setup, and sportsbook delivery optimization.</p>
             </div>
 
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">Product Development</h4>
+            <div class="card border border-slate-200 p-8 rounded-2xl bg-white">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-pink-500 flex items-center justify-center mb-5 shadow-lg shadow-violet-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </div>
+                <h4 class="font-display text-xl font-bold mb-3 text-ink">Product Development</h4>
                 <p class="text-slate-600 leading-relaxed">Figma collaboration, sportsbook UX/UI improvements, frontend odds presentation, player-facing promo logic, 701% bonus mechanics, and CMS-driven product configuration.</p>
             </div>
 
-            <div class="border border-slate-200 p-8 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all bg-white">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">Trading Leadership</h4>
+            <div class="card border border-slate-200 p-8 rounded-2xl bg-white">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-pink-500 flex items-center justify-center mb-5 shadow-lg shadow-amber-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h4 class="font-display text-xl font-bold mb-3 text-ink">Trading Leadership</h4>
                 <p class="text-slate-600 leading-relaxed">Led 14 traders across 9 markets, while contributing product input on sportsbook structure, betting flow, market relevance, and customer-facing platform improvements.</p>
             </div>
         </div>
     </section>
 
-    <section id="promo-product" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Promo & Product</h3>
-        <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            Product-driven promo design, sportsbook frontend logic, CMS-based configuration, and user-focused betting experiences across web and mobile.
-        </p>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="border border-slate-200 p-6 rounded-xl bg-white shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-xl font-bold mb-3 text-slate-900">PRD & Promo Specs</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Detailed Product Requirements Documents for promo flows, frontend behavior, bonus eligibility, KYC filters, CMS rules, and sportsbook feature execution.
+    <!-- PROMO & PRODUCT -->
+    <section id="promo-product" class="scroll-mt-24 soft-section">
+        <div class="max-w-5xl mx-auto px-6 py-24">
+            <div class="text-center mb-14">
+                <span class="tag mb-4"><span class="tag-dot"></span>Promo &amp; Product</span>
+                <h3 class="font-display text-4xl md:text-5xl font-bold text-ink mb-6">Promo &amp; Product</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Product-driven promo design, sportsbook frontend logic, CMS-based configuration, and user-focused betting experiences across web and mobile.
                 </p>
             </div>
 
-            <div class="border border-slate-200 p-6 rounded-xl bg-white shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-xl font-bold mb-3 text-slate-900">Promo Manager / Bonus Owner</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Ownership of promo lifecycles from concept to execution, including bonus setup, frontend visibility, highlighted odds logic, monitoring, and optimization.
-                </p>
-            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card border border-slate-200 p-7 rounded-2xl bg-white">
+                    <h4 class="font-display text-lg font-bold mb-3 text-ink">PRD &amp; Promo Specs</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Detailed Product Requirements Documents for promo flows, frontend behavior, bonus eligibility, KYC filters, CMS rules, and sportsbook feature execution.
+                    </p>
+                </div>
 
-            <div class="border border-slate-200 p-6 rounded-xl bg-white shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-xl font-bold mb-3 text-slate-900">PSPO I & Agile Practices</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Running backlogs, defining user stories and acceptance criteria, and coordinating sportsbook product delivery across developers, operations, and business stakeholders.
-                </p>
-            </div>
+                <div class="card border border-slate-200 p-7 rounded-2xl bg-white">
+                    <h4 class="font-display text-lg font-bold mb-3 text-ink">Promo Manager / Bonus Owner</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ownership of promo lifecycles from concept to execution, including bonus setup, frontend visibility, highlighted odds logic, monitoring, and optimization.
+                    </p>
+                </div>
 
-            <div class="border border-slate-200 p-6 rounded-xl bg-white shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-xl font-bold mb-3 text-slate-900">Mixpanel & A/B for Bonuses</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Tracking bonus conversion, player behavior, and feature performance to improve promo effectiveness, frontend usability, and player engagement through testing and iteration.
-                </p>
-            </div>
+                <div class="card border border-slate-200 p-7 rounded-2xl bg-white">
+                    <h4 class="font-display text-lg font-bold mb-3 text-ink">PSPO I &amp; Agile Practices</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Running backlogs, defining user stories and acceptance criteria, and coordinating sportsbook product delivery across developers, operations, and business stakeholders.
+                    </p>
+                </div>
 
-            <div class="border border-slate-200 p-6 rounded-xl bg-white shadow-sm hover:shadow-xl transition-all md:col-span-2">
-                <h4 class="text-xl font-bold mb-3 text-slate-900">Frontend Navigation & Promo Visibility</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Improved sportsbook usability by introducing dedicated navigation for Basketball Players markets and defining visual highlighting for boosted odds in the 701% bonus flow, making key selections easier to find and promotional prices instantly recognizable.
-                </p>
+                <div class="card border border-slate-200 p-7 rounded-2xl bg-white">
+                    <h4 class="font-display text-lg font-bold mb-3 text-ink">Mixpanel &amp; A/B for Bonuses</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tracking bonus conversion, player behavior, and feature performance to improve promo effectiveness, frontend usability, and player engagement through testing and iteration.
+                    </p>
+                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    <a href="./kosarka-igraci-frontend.png" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
-                        <div class="h-[320px] flex items-center justify-center">
-                            <img src="./kosarka-igraci-frontend.png" alt="Basketball Players navigation in sportsbook app" class="max-h-full w-full object-contain rounded-md hover:opacity-90 transition">
-                        </div>
-                    </a>
+                <div class="card border border-slate-200 p-7 rounded-2xl bg-white md:col-span-2">
+                    <h4 class="font-display text-lg font-bold mb-3 text-ink">Frontend Navigation &amp; Promo Visibility</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Improved sportsbook usability by introducing dedicated navigation for Basketball Players markets and defining visual highlighting for boosted odds in the 701% bonus flow, making key selections easier to find and promotional prices instantly recognizable.
+                    </p>
 
-                    <a href="./fudbal-podvucene-kvote.png" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
-                        <div class="h-[320px] flex items-center justify-center">
-                            <img src="./fudbal-podvucene-kvote.png" alt="Boosted odds highlighted in 701 percent bonus flow" class="max-h-full w-full object-contain rounded-md hover:opacity-90 transition">
-                        </div>
-                    </a>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                        <a href="./kosarka-igraci-frontend.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 hover:border-indigo-300 transition">
+                            <div class="h-[320px] flex items-center justify-center">
+                                <img src="./kosarka-igraci-frontend.png" alt="Basketball Players navigation in sportsbook app" loading="lazy" class="max-h-full w-full object-contain rounded-md">
+                            </div>
+                        </a>
+
+                        <a href="./fudbal-podvucene-kvote.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 hover:border-indigo-300 transition">
+                            <div class="h-[320px] flex items-center justify-center">
+                                <img src="./fudbal-podvucene-kvote.png" alt="Boosted odds highlighted in 701 percent bonus flow" loading="lazy" class="max-h-full w-full object-contain rounded-md">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CASE STUDIES -->
     <section id="case-studies" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Case Studies</h3>
-        <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            Selected product initiatives showing how I approached discovery, execution, and measurable impact in sportsbook environments.
-        </p>
+        <div class="text-center mb-14">
+            <span class="tag mb-4"><span class="tag-dot"></span>Case Studies</span>
+            <h3 class="font-display text-4xl md:text-5xl font-bold text-ink mb-6">Case Studies</h3>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Selected product initiatives showing how I approached discovery, execution, and measurable impact in sportsbook environments.
+            </p>
+        </div>
 
         <div class="space-y-8">
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-2xl font-bold text-slate-900 mb-3">Player Props Discovery & Frontend Navigation</h4>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    Context: Basketball player markets had strong user interest, but discovery was still dependent on deeper match-page navigation.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Problem: Valuable player props were not visible enough in the core sportsbook journey, which limited engagement and made the experience harder to scan.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    What I did: I defined dedicated frontend navigation for Basketball Players markets and improved how these markets were presented in the main sportsbook structure.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Why this approach: Surfacing the market earlier in the journey was a simpler and more scalable solution than relying only on match-page entry points.
-                </p>
-                <div class="grid sm:grid-cols-3 gap-4 text-sm">
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Problem</p>
-                        <p class="text-slate-600">Low discoverability of player props.</p>
+            <!-- Case 1 -->
+            <div class="card bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+                <div class="flex items-start gap-4 mb-5">
+                    <span class="step-number flex-shrink-0">01</span>
+                    <div>
+                        <span class="pill par-amber mb-3">Frontend UX · Discovery</span>
+                        <h4 class="font-display text-2xl font-bold text-ink">Player Props Discovery &amp; Frontend Navigation</h4>
                     </div>
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Action</p>
-                        <p class="text-slate-600">Dedicated frontend navigation and improved UX structure.</p>
+                </div>
+                <div class="space-y-3 text-slate-700 leading-relaxed mb-6 max-w-3xl">
+                    <p><strong class="text-ink">Context:</strong> Basketball player markets had strong user interest, but discovery was still dependent on deeper match-page navigation.</p>
+                    <p><strong class="text-ink">Problem:</strong> Valuable player props were not visible enough in the core sportsbook journey, which limited engagement and made the experience harder to scan.</p>
+                    <p><strong class="text-ink">What I did:</strong> I defined dedicated frontend navigation for Basketball Players markets and improved how these markets were presented in the main sportsbook structure.</p>
+                    <p><strong class="text-ink">Why this approach:</strong> Surfacing the market earlier in the journey was a simpler and more scalable solution than relying only on match-page entry points.</p>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-3 text-sm">
+                    <div class="par-card-red border rounded-xl p-4">
+                        <p class="font-semibold text-red-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-500"></span>Problem</p>
+                        <p class="text-slate-700">Low discoverability of player props.</p>
                     </div>
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Result</p>
-                        <p class="text-slate-600">Approx. 20% uplift in player props play rate.</p>
+                    <div class="par-card-amber border rounded-xl p-4">
+                        <p class="font-semibold text-amber-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>Action</p>
+                        <p class="text-slate-700">Dedicated frontend navigation and improved UX structure.</p>
+                    </div>
+                    <div class="par-card-green border rounded-xl p-4">
+                        <p class="font-semibold text-green-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500"></span>Result</p>
+                        <p class="text-slate-700">Approx. 20% uplift in player props play rate.</p>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <p class="text-sm font-semibold text-slate-900 mb-3">Proof Artifact</p>
-                    <a href="./kosarka-igraci-frontend.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mb-3">Proof Artifact</p>
+                    <a href="./kosarka-igraci-frontend.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 hover:border-indigo-300 transition">
                         <div class="h-[260px] flex items-center justify-center">
-                            <img src="./kosarka-igraci-frontend.png" alt="Player Props navigation proof artifact" class="max-h-full w-full object-contain rounded-md">
+                            <img src="./kosarka-igraci-frontend.png" alt="Player Props navigation proof artifact" loading="lazy" class="max-h-full w-full object-contain rounded-md">
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-2xl font-bold text-slate-900 mb-3">701% Parlay Bonus — CMS Visibility & Risk Controls</h4>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    Context: A high-impact promotional mechanic needed to be visible on the frontend, commercially effective, and operationally safe.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Problem: Promo journeys can increase engagement, but unclear odds presentation and weak control mechanisms can create confusion and abuse risk.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    What I did: I worked on the product logic behind the 701% Parlay Bonus, including CMS-driven odds highlighting, promotional visibility, and fraud-prevention mechanics.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Why this approach: CMS-based control reduced dependency on manual changes and made the campaign easier to manage across different states and operational needs.
-                </p>
-                <div class="grid sm:grid-cols-3 gap-4 text-sm">
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Problem</p>
-                        <p class="text-slate-600">Complex promo flow with risk of user confusion and misuse.</p>
+            <!-- Case 2 -->
+            <div class="card bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+                <div class="flex items-start gap-4 mb-5">
+                    <span class="step-number flex-shrink-0">02</span>
+                    <div>
+                        <span class="pill par-amber mb-3">CMS · Promo · Risk</span>
+                        <h4 class="font-display text-2xl font-bold text-ink">701% Parlay Bonus — CMS Visibility &amp; Risk Controls</h4>
                     </div>
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Action</p>
-                        <p class="text-slate-600">Defined CMS-driven frontend logic and fraud-prevention rules.</p>
+                </div>
+                <div class="space-y-3 text-slate-700 leading-relaxed mb-6 max-w-3xl">
+                    <p><strong class="text-ink">Context:</strong> A high-impact promotional mechanic needed to be visible on the frontend, commercially effective, and operationally safe.</p>
+                    <p><strong class="text-ink">Problem:</strong> Promo journeys can increase engagement, but unclear odds presentation and weak control mechanisms can create confusion and abuse risk.</p>
+                    <p><strong class="text-ink">What I did:</strong> I worked on the product logic behind the 701% Parlay Bonus, including CMS-driven odds highlighting, promotional visibility, and fraud-prevention mechanics.</p>
+                    <p><strong class="text-ink">Why this approach:</strong> CMS-based control reduced dependency on manual changes and made the campaign easier to manage across different states and operational needs.</p>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-3 text-sm">
+                    <div class="par-card-red border rounded-xl p-4">
+                        <p class="font-semibold text-red-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-500"></span>Problem</p>
+                        <p class="text-slate-700">Complex promo flow with risk of user confusion and misuse.</p>
                     </div>
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Result</p>
-                        <p class="text-slate-600">Stronger promo visibility and more controlled execution.</p>
+                    <div class="par-card-amber border rounded-xl p-4">
+                        <p class="font-semibold text-amber-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>Action</p>
+                        <p class="text-slate-700">Defined CMS-driven frontend logic and fraud-prevention rules.</p>
+                    </div>
+                    <div class="par-card-green border rounded-xl p-4">
+                        <p class="font-semibold text-green-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500"></span>Result</p>
+                        <p class="text-slate-700">Stronger promo visibility and more controlled execution.</p>
                     </div>
                 </div>
 
                 <div class="mt-6">
-                    <p class="text-sm font-semibold text-slate-900 mb-3">Proof Artifact</p>
-                    <a href="./fudbal-podvucene-kvote.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-sm hover:shadow-md transition">
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mb-3">Proof Artifact</p>
+                    <a href="./fudbal-podvucene-kvote.png" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-200 bg-slate-50 p-3 hover:border-indigo-300 transition">
                         <div class="h-[260px] flex items-center justify-center">
-                            <img src="./fudbal-podvucene-kvote.png" alt="701 percent Parlay Bonus highlighted odds proof artifact" class="max-h-full w-full object-contain rounded-md">
+                            <img src="./fudbal-podvucene-kvote.png" alt="701 percent Parlay Bonus highlighted odds proof artifact" loading="lazy" class="max-h-full w-full object-contain rounded-md">
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
-                <h4 class="text-2xl font-bold text-slate-900 mb-3">Multi-Market CMS Customization for White-Label Delivery</h4>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    Context: Different markets required localized homepage content, market emphasis, and promotional presentation.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Problem: A single static sportsbook setup created delivery bottlenecks and reduced flexibility for local market needs.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    What I did: I helped architect CMS capabilities for white-label customization of homepage content, offers, and market-specific presentation.
-                </p>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Why this approach: Market-level configurability reduced engineering dependency and made it easier to support different commercial priorities across markets.
-                </p>
-                <div class="grid sm:grid-cols-3 gap-4 text-sm">
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Problem</p>
-                        <p class="text-slate-600">Different markets required different UX, content, and pricing emphasis.</p>
-                    </div>
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Action</p>
-                        <p class="text-slate-600">Built CMS-based white-label customization across 9 markets.</p>
-                    </div>
-                    <div class="bg-blue-50 rounded-xl p-4">
-                        <p class="font-semibold text-slate-900 mb-1">Result</p>
-                        <p class="text-slate-600">Faster rollout execution and stronger local market fit.</p>
+            <!-- Case 3 -->
+            <div class="card bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+                <div class="flex items-start gap-4 mb-5">
+                    <span class="step-number flex-shrink-0">03</span>
+                    <div>
+                        <span class="pill par-amber mb-3">White-Label · Multi-Market</span>
+                        <h4 class="font-display text-2xl font-bold text-ink">Multi-Market CMS Customization for White-Label Delivery</h4>
                     </div>
                 </div>
+                <div class="space-y-3 text-slate-700 leading-relaxed mb-6 max-w-3xl">
+                    <p><strong class="text-ink">Context:</strong> Different markets required localized homepage content, market emphasis, and promotional presentation.</p>
+                    <p><strong class="text-ink">Problem:</strong> A single static sportsbook setup created delivery bottlenecks and reduced flexibility for local market needs.</p>
+                    <p><strong class="text-ink">What I did:</strong> I helped architect CMS capabilities for white-label customization of homepage content, offers, and market-specific presentation.</p>
+                    <p><strong class="text-ink">Why this approach:</strong> Market-level configurability reduced engineering dependency and made it easier to support different commercial priorities across markets.</p>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-3 text-sm">
+                    <div class="par-card-red border rounded-xl p-4">
+                        <p class="font-semibold text-red-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-500"></span>Problem</p>
+                        <p class="text-slate-700">Different markets required different UX, content, and pricing emphasis.</p>
+                    </div>
+                    <div class="par-card-amber border rounded-xl p-4">
+                        <p class="font-semibold text-amber-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>Action</p>
+                        <p class="text-slate-700">Built CMS-based white-label customization across 9 markets.</p>
+                    </div>
+                    <div class="par-card-green border rounded-xl p-4">
+                        <p class="font-semibold text-green-800 mb-1 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500"></span>Result</p>
+                        <p class="text-slate-700">Faster rollout execution and stronger local market fit.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="how-i-work" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">How I Work</h3>
-        <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            My approach combines sportsbook domain expertise, structured product delivery, and close collaboration with technical and operational teams.
-        </p>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
-                <h4 class="text-lg font-bold text-slate-900 mb-3">1. Define the problem</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Start from business need, user friction, market context, or delivery dependency and turn it into a clear product objective.
+    <!-- HOW I WORK -->
+    <section id="how-i-work" class="scroll-mt-24 soft-section">
+        <div class="max-w-5xl mx-auto px-6 py-24">
+            <div class="text-center mb-14">
+                <span class="tag mb-4"><span class="tag-dot"></span>Process</span>
+                <h3 class="font-display text-4xl md:text-5xl font-bold text-ink mb-6">How I Work</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Sportsbook domain expertise, structured product delivery, and close collaboration with technical and operational teams.
                 </p>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
-                <h4 class="text-lg font-bold text-slate-900 mb-3">2. Align stakeholders</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Work closely with trading, development, QA, operations, and business teams to align priorities, feasibility, and execution scope.
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <span class="step-number mb-5">01</span>
+                    <h4 class="font-display text-lg font-bold text-ink mb-3 mt-4">Define the problem</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Start from business need, user friction, market context, or delivery dependency and turn it into a clear product objective.
+                    </p>
+                </div>
+
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <span class="step-number mb-5">02</span>
+                    <h4 class="font-display text-lg font-bold text-ink mb-3 mt-4">Align stakeholders</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Work closely with trading, development, QA, operations, and business teams to align priorities, feasibility, and execution scope.
+                    </p>
+                </div>
+
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <span class="step-number mb-5">03</span>
+                    <h4 class="font-display text-lg font-bold text-ink mb-3 mt-4">Deliver clearly</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Translate needs into structured backlog items, user stories, acceptance criteria, and validation steps for efficient delivery.
+                    </p>
+                </div>
+
+                <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+                    <span class="step-number mb-5">04</span>
+                    <h4 class="font-display text-lg font-bold text-ink mb-3 mt-4">Validate and improve</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Support STAGE validation, production rollout, and post-launch monitoring to improve correctness, usability, and performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SKILLS -->
+    <section id="skills" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24">
+        <div class="text-center mb-14">
+            <span class="tag mb-4"><span class="tag-dot"></span>Skills</span>
+            <h3 class="font-display text-4xl md:text-5xl font-bold text-ink">Core Skills</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <h4 class="font-display text-xl font-bold mb-6 text-ink flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white text-sm">T</span>
+                    Technical
+                </h4>
+                <div class="space-y-2">
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">API Integrations</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Sportsbook Trading &amp; Odds</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Figma Prototyping</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Google Analytics</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">SQL</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Sportsbook Frontend UX</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">CMS Configuration</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">User Stories &amp; Acceptance Criteria</span></div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-display text-xl font-bold mb-6 text-ink flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-pink-500 flex items-center justify-center text-white text-sm">B</span>
+                    Business
+                </h4>
+                <div class="space-y-2">
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Multi-Market Ops</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Bonus Optimization</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">KYC / Compliance</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">A/B Testing for Bonuses</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">PRD, Promo Manager, Mixpanel</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">Betting Journey Optimization</span></div>
+                    <div class="skill-chip py-3 pl-6 pr-4 rounded-xl"><span class="font-medium text-slate-800">White-Label Product Customization</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI TOOLKIT -->
+    <section id="ai-toolkit" class="scroll-mt-24 accent-section">
+        <div class="max-w-5xl mx-auto px-6 py-24">
+            <div class="text-center mb-14">
+                <span class="tag mb-4"><span class="tag-dot"></span>AI Toolkit</span>
+                <h3 class="font-display text-4xl md:text-5xl font-bold text-ink mb-6">AI Toolkit Accelerator</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Based on AdmiralBet workflows, sportsbook integrations, promo logic, and product delivery use cases.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-white p-7 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 mb-4 flex items-center justify-center text-white font-bold">API</div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-ink">Betradar API</h4>
+                    <p class="text-slate-600 text-sm mb-5">Auto-spec for odds and settlement mapping.</p>
+                    <a href="betradar-api.md" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-5 py-2.5 rounded-lg font-semibold inline-block text-sm">View Prompts →</a>
+                </div>
+                <div class="card bg-white p-7 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-pink-500 mb-4 flex items-center justify-center text-white font-bold">701</div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-ink">701% Parlay</h4>
+                    <p class="text-slate-600 text-sm mb-5">Tiered bonus logic for PAM and frontend.</p>
+                    <a href="701-parlay-bonus.md" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-5 py-2.5 rounded-lg font-semibold inline-block text-sm">View Prompts →</a>
+                </div>
+                <div class="card bg-white p-7 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-pink-500 mb-4 flex items-center justify-center text-white font-bold">CM</div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-ink">Cross-Market Config</h4>
+                    <p class="text-slate-600 text-sm mb-5">Multi-market sportsbook configuration and player props specs.</p>
+                    <a href="cross-market-config.md" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-5 py-2.5 rounded-lg font-semibold inline-block text-sm">View Prompts →</a>
+                </div>
+                <div class="card bg-white p-7 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 mb-4 flex items-center justify-center text-white font-bold">A/B</div>
+                    <h4 class="font-display text-xl font-bold mb-3 text-ink">Promo Copy &amp; A/B</h4>
+                    <p class="text-slate-600 text-sm mb-5">Bonus-related messaging and experimentation ideas.</p>
+                    <a href="promo-copy-prompts.md" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-5 py-2.5 rounded-lg font-semibold inline-block text-sm">View Prompts →</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-14">
+                <a href="https://github.com/imicunovic83/ilija-micunovic.github.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-ink text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.78 8.21 11.37.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.92 1.24 3.23 0 4.62-2.81 5.65-5.49 5.95.43.37.82 1.1.82 2.22 0 1.6-.02 2.9-.02 3.29 0 .32.22.7.83.58C20.56 22.27 24 17.8 24 12.5 24 5.87 18.63.5 12 .5z"/></svg>
+                    Full Repo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="scroll-mt-24 soft-section">
+        <div class="max-w-5xl mx-auto px-6 py-24">
+            <div class="text-center mb-14">
+                <span class="tag mb-4"><span class="tag-dot"></span>Certifications</span>
+                <h3 class="font-display text-4xl md:text-5xl font-bold text-ink mb-6">Certifications</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Supporting product ownership, leadership, and structured delivery.
                 </p>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
-                <h4 class="text-lg font-bold text-slate-900 mb-3">3. Deliver clearly</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Translate needs into structured backlog items, user stories, acceptance criteria, and validation steps for efficient delivery.
-                </p>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="./Ilija-Scrum-Product-Owner.png" target="_blank" rel="noopener noreferrer" class="card block bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-indigo-50 to-violet-50 flex items-center justify-center p-4">
+                        <img src="./Ilija-Scrum-Product-Owner.png" alt="Professional Scrum Product Owner I certificate" loading="lazy" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <span class="pill par-amber mb-3">Scrum.org</span>
+                        <h4 class="font-display text-lg font-bold text-ink mb-2">Professional Scrum Product Owner I (PSPO I)</h4>
+                        <p class="text-slate-500 text-sm">Certification date: March 16, 2026</p>
+                    </div>
+                </a>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
-                <h4 class="text-lg font-bold text-slate-900 mb-3">4. Validate and improve</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Support STAGE validation, production rollout, and post-launch monitoring to improve correctness, usability, and performance.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Core Skills</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            <div class="space-y-4">
-                <h4 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-slate-200 pb-2">Technical</h4>
-                <div class="space-y-3">
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">API Integrations</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Sportsbook Trading & Odds</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Figma Prototyping</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Google Analytics</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">SQL</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Sportsbook Frontend UX</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">CMS Configuration</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">User Stories & Acceptance Criteria</span></div>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="text-2xl font-bold mb-6 text-slate-900 border-b-2 border-slate-200 pb-2">Business</h4>
-                <div class="space-y-3">
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Multi-Market Ops</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Bonus Optimization</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">KYC / Compliance</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">A/B Testing for Bonuses</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">PRD, Promo Manager, Mixpanel</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">Betting Journey Optimization</span></div>
-                    <div class="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all"><span class="text-lg font-medium">White-Label Product Customization</span></div>
-                </div>
+                <a href="./Sertifikat - Modern manager.png" target="_blank" rel="noopener noreferrer" class="card block bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-amber-50 to-pink-50 flex items-center justify-center p-4">
+                        <img src="./Sertifikat - Modern manager.png" alt="Modern Manager certificate" loading="lazy" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <span class="pill par-amber mb-3">Menadžment Centar Beograd</span>
+                        <h4 class="font-display text-lg font-bold text-ink mb-2">Modern Manager — Project Management PMI Methodology</h4>
+                        <p class="text-slate-500 text-sm">Certification date: June 10, 2023</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="ai-toolkit" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-gradient-to-r from-indigo-50 to-blue-50">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">AI Toolkit Accelerator</h3>
-        <p class="text-xl text-slate-600 text-center mb-16 max-w-2xl mx-auto">Based on AdmiralBet workflows, sportsbook integrations, promo logic, and product delivery use cases.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">Betradar API</h4>
-                <p class="text-slate-600 mb-6">Auto-spec for odds and settlement mapping.</p>
-                <a href="betradar-api.md" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-xl font-bold inline-block hover:bg-blue-700">View Prompts</a>
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-mt-24 relative overflow-hidden">
+        <div class="hero-bg max-w-5xl mx-auto px-6 py-24 text-center relative z-10">
+            <span class="tag mb-4"><span class="tag-dot"></span>Contact</span>
+            <h3 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink">Let's <span class="gradient-text">Connect</span></h3>
+            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">Always happy to exchange ideas on sportsbook product, integrations, and iGaming.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="mailto:imicunovic83@gmail.com" class="btn-primary text-white px-8 py-4 rounded-xl font-semibold">imicunovic83@gmail.com</a>
+                <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" rel="noopener noreferrer" class="btn-ghost border-2 border-slate-300 px-8 py-4 rounded-xl font-semibold text-slate-700 bg-white">LinkedIn Profile</a>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">701% Parlay</h4>
-                <p class="text-slate-600 mb-6">Tiered bonus logic for PAM and frontend.</p>
-                <a href="701-parlay-bonus.md" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-xl font-bold inline-block hover:bg-blue-700">View Prompts</a>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">Player Props UX</h4>
-                <p class="text-slate-600 mb-6">Figma concepts and discovery improvements.</p>
-                <a href="cross-market-config.md" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-xl font-bold inline-block hover:bg-blue-700">View Prompts</a>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                <h4 class="text-2xl font-bold mb-4 text-slate-900">Promo Copy & A/B</h4>
-                <p class="text-slate-600 mb-6">Bonus-related messaging and experimentation ideas.</p>
-                <a href="promo-copy-prompts.md" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-xl font-bold inline-block hover:bg-blue-700">View Prompts</a>
-            </div>
+            <p class="text-sm text-slate-500">&copy; 2026 Ilija Micunovic. All rights reserved.</p>
         </div>
-
-        <div class="text-center mt-16">
-            <a href="https://github.com/imicunovic83/ilija-micunovic.github.io/tree/main/ai-prompts" target="_blank" rel="noopener noreferrer" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-lg inline-block hover:bg-slate-800">Full Repo →</a>
-        </div>
-    </section>
-
-    <section id="certifications" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 bg-slate-50">
-        <h3 class="text-4xl font-black mb-16 text-slate-900 text-center">Certifications</h3>
-        <p class="text-xl text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            Relevant certifications supporting product ownership, leadership, and structured delivery.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a href="./Ilija-Scrum-Product-Owner.png" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all overflow-hidden">
-                <div class="aspect-[4/3] bg-slate-100 flex items-center justify-center p-4">
-                    <img src="./Ilija-Scrum-Product-Owner.png" alt="Professional Scrum Product Owner I certificate" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Professional Scrum Product Owner I (PSPO I)</h4>
-                    <p class="text-slate-600 text-sm mb-1">Scrum.org</p>
-                    <p class="text-slate-500 text-sm">Certification date: March 16, 2026</p>
-                </div>
-            </a>
-
-            <a href="./Sertifikat - Modern manager.png" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all overflow-hidden">
-                <div class="aspect-[4/3] bg-slate-100 flex items-center justify-center p-4">
-                    <img src="./Sertifikat - Modern manager.png" alt="Modern Manager certificate" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Modern Manager — Project Management PMI Methodology</h4>
-                    <p class="text-slate-600 text-sm mb-1">Menadžment Centar Beograd</p>
-                    <p class="text-slate-500 text-sm">Certification date: June 10, 2023</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <section id="contact" class="scroll-mt-24 max-w-5xl mx-auto px-6 py-24 text-center">
-        <h3 class="text-3xl font-black mb-8 text-slate-900">Get In Touch</h3>
-        <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">Open for Product Manager / Product Owner / Sportsbook Manager / Head of Product roles – remote worldwide.</p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <a href="mailto:ilijamicunovic@yahoo.com" class="bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg">ilijamicunovic@yahoo.com</a>
-            <a href="https://www.linkedin.com/in/ilija-micunovic/" target="_blank" rel="noopener noreferrer" class="border-2 border-slate-300 px-8 py-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:border-primary transition-all shadow-lg">LinkedIn Profile</a>
-        </div>
-        <p class="text-sm text-slate-500">&copy; 2026 Ilija Micunovic. All rights reserved.</p>
     </section>
 
     <script>
@@ -458,13 +721,19 @@
     const menu = document.getElementById('mobileMenu');
     const mobileLinks = menu.querySelectorAll('a');
 
+    const setExpanded = (isOpen) => {
+        btn?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
+
     btn?.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+        setExpanded(!menu.classList.contains('hidden'));
     });
 
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.add('hidden');
+            setExpanded(false);
         });
     });
 
@@ -474,8 +743,9 @@
 
         if (!clickedInsideMenu && !clickedButton) {
             menu.classList.add('hidden');
+            setExpanded(false);
         }
     });
-</script>
+    </script>
 </body>
 </html>
